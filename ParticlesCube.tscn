@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://bugcx8mtjfg4h"]
+
+[ext_resource type="Texture2D" uid="uid://pobbqky3nd8y" path="res://fire_particle.png" id="1_n2ojt"]
+[ext_resource type="Texture2D" uid="uid://cxl2rq4n5qyyd" path="res://30BB02B9-2220-469F-8200-EC6EF5B9E642.png" id="2_pfmdb"]
+
+[sub_resource type="Environment" id="Environment_cct0p"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 4.74
+glow_strength = 1.64
+glow_blend_mode = 1
+glow_hdr_threshold = 0.85
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="."]
+modulate = Color(0, 0.431373, 0.0588235, 1)
+self_modulate = Color(1.5, 1.5, 1.5, 1)
+position = Vector2(432, 153)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("1_n2ojt")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(1000, 0)
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
+modulate = Color(0, 0.431373, 0.0588235, 1)
+self_modulate = Color(1.5, 1.5, 1.5, 1)
+position = Vector2(834, 524)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("1_n2ojt")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(-1000, 0)
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color(0, 0.431373, 0.0588235, 1)
+self_modulate = Color(1.5, 1.5, 1.5, 1)
+position = Vector2(830, 152)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("1_n2ojt")
+emission_shape = 1
+emission_sphere_radius = 48.83
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+modulate = Color(0, 0.431373, 0.0588235, 1)
+self_modulate = Color(1.5, 1.5, 1.5, 1)
+position = Vector2(430, 524)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("1_n2ojt")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(0, -980)
+scale_amount_min = 0.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cct0p")
+
+[node name="30bb02b9-2220-469f-8200-ec6ef5b9e642" type="Sprite2D" parent="."]
+position = Vector2(630, 330)
+scale = Vector2(0.550926, 0.540741)
+texture = ExtResource("2_pfmdb")

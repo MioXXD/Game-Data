@@ -1,0 +1,1025 @@
+[gd_scene load_steps=22 format=3 uid="uid://cla1lgthdf1um"]
+
+[ext_resource type="Script" path="res://Line2D.gd" id="1_yk3b3"]
+[ext_resource type="Script" path="res://Area2D.gd" id="2_6guvq"]
+[ext_resource type="Script" path="res://Tryangel.gd" id="3_akno0"]
+[ext_resource type="Texture2D" uid="uid://pobbqky3nd8y" path="res://fire_particle.png" id="4_xafiu"]
+[ext_resource type="Texture2D" uid="uid://bbv7xyjrnhclx" path="res://7B1B7CAB-B2FC-426B-A155-C0B0A1C22195.png" id="5_myhh7"]
+[ext_resource type="Script" path="res://CubeArea.gd" id="6_o8vap"]
+[ext_resource type="Texture2D" uid="uid://cxl2rq4n5qyyd" path="res://30BB02B9-2220-469F-8200-EC6EF5B9E642.png" id="6_otpaf"]
+[ext_resource type="Script" path="res://HexArea.gd" id="8_5g3d8"]
+[ext_resource type="Texture2D" uid="uid://b6qx3kcxralgh" path="res://3E70C004-FFAF-4307-8A39-DB14ACE1F639.png" id="8_muc85"]
+[ext_resource type="Script" path="res://Spawner.gd" id="10_3dpsf"]
+
+[sub_resource type="Environment" id="Environment_g75sl"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 4.77
+glow_strength = 1.53
+glow_blend_mode = 1
+glow_hdr_threshold = 2.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j5fw6"]
+radius = 4.12311
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7bbc0"]
+radius = 368.576
+
+[sub_resource type="QuadMesh" id="QuadMesh_pgq3j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ectiw"]
+size = Vector2(780, 716.129)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onqpx"]
+radius = 417.691
+
+[sub_resource type="Animation" id="Animation_yo5aw"]
+resource_name = "Cube"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CubeArea:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.42, 0.42), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CubeArea2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.42, 0.42), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CubeArea3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.42, 0.42), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jsak0"]
+resource_name = "Hex"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HexArea:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.27, 0.262), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HexArea2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.27, 0.262), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HexArea3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.27, 0.262), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hvqob"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.25, 0.258)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.25, 0.258)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.25, 0.258)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CubeArea:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.42, 0.42)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CubeArea2:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.42, 0.42)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CubeArea3:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.42, 0.42)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HexArea:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.27, 0.262)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HexArea2:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.27, 0.262)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HexArea3:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.27, 0.262)]
+}
+
+[sub_resource type="Animation" id="Animation_8l2na"]
+resource_name = "Tryangle"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.25, 0.258), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.25, 0.258), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.25, 0.258), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hu2ei"]
+_data = {
+"Cube": SubResource("Animation_yo5aw"),
+"Hex": SubResource("Animation_jsak0"),
+"RESET": SubResource("Animation_hvqob"),
+"Tryangle": SubResource("Animation_8l2na")
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(1, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_g75sl")
+
+[node name="Line2D" type="Line2D" parent="."]
+self_modulate = Color(0.85098, 0.85098, 0.85098, 1)
+width = 20.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("1_yk3b3")
+
+[node name="Area2D" type="Area2D" parent="Line2D"]
+position = Vector2(184, 85)
+script = ExtResource("2_6guvq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Area2D"]
+shape = SubResource("CircleShape2D_j5fw6")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(2000, 3000)
+scale = Vector2(0.25, 0.258)
+script = ExtResource("3_akno0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-1.90977, 2.00272e-05)
+shape = SubResource("CircleShape2D_7bbc0")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Area2D2/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(-425.889, 231.429)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 91.45
+direction = Vector2(1.385, 0)
+spread = 55.91
+gravity = Vector2(600, -971)
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="Area2D2/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(414.43, 231.429)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 94.3
+direction = Vector2(1.385, 0)
+spread = 55.91
+gravity = Vector2(-1000, 0)
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Area2D2/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(-1.90991, -426.123)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 90.75
+direction = Vector2(1.385, 0)
+spread = 80.0
+gravity = Vector2(600, 971)
+linear_accel_min = 3.03
+linear_accel_max = 7.07
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="7b1b7cab-b2fc-426b-a155-c0b0a1c22195" type="Sprite2D" parent="Area2D2/CollisionShape2D"]
+self_modulate = Color(0.645001, 0.238345, 0.58759, 1)
+z_index = 1
+position = Vector2(0, -80.8164)
+texture = ExtResource("5_myhh7")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1700, 3000)
+scale = Vector2(0.25, 0.258)
+script = ExtResource("3_akno0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.286133, 0)
+shape = SubResource("CircleShape2D_7bbc0")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Area2D/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(-427.512, 231.428)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 91.45
+direction = Vector2(1.385, 0)
+spread = 55.91
+gravity = Vector2(600, -971)
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="Area2D/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(412.806, 231.428)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 94.3
+direction = Vector2(1.385, 0)
+spread = 55.91
+gravity = Vector2(-1000, 0)
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Area2D/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(-3.53369, -426.123)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 90.75
+direction = Vector2(1.385, 0)
+spread = 80.0
+gravity = Vector2(600, 971)
+linear_accel_min = 3.03
+linear_accel_max = 7.07
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="7b1b7cab-b2fc-426b-a155-c0b0a1c22195" type="Sprite2D" parent="Area2D/CollisionShape2D"]
+self_modulate = Color(0.645001, 0.238345, 0.58759, 1)
+z_index = 1
+position = Vector2(-1.62354, -80.8164)
+texture = ExtResource("5_myhh7")
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2(1400, 3000)
+scale = Vector2(0.25, 0.258)
+script = ExtResource("3_akno0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(-1.90977, 2.00272e-05)
+shape = SubResource("CircleShape2D_7bbc0")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Area2D3/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(-425.889, 231.429)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 91.45
+direction = Vector2(1.385, 0)
+spread = 55.91
+gravity = Vector2(600, -971)
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="Area2D3/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(414.43, 231.429)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 94.3
+direction = Vector2(1.385, 0)
+spread = 55.91
+gravity = Vector2(-1000, 0)
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Area2D3/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(-1.90991, -426.123)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 90.75
+direction = Vector2(1.385, 0)
+spread = 80.0
+gravity = Vector2(600, 971)
+linear_accel_min = 3.03
+linear_accel_max = 7.07
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="7b1b7cab-b2fc-426b-a155-c0b0a1c22195" type="Sprite2D" parent="Area2D3/CollisionShape2D"]
+self_modulate = Color(0.645001, 0.238345, 0.58759, 1)
+z_index = 1
+position = Vector2(0, -80.8164)
+texture = ExtResource("5_myhh7")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+self_modulate = Color(0.054902, 0.054902, 0.054902, 1)
+z_index = -4
+position = Vector2(544, 966)
+scale = Vector2(1115.5, 1940.5)
+mesh = SubResource("QuadMesh_pgq3j")
+
+[node name="CubeArea" type="Area2D" parent="."]
+position = Vector2(500, 3000)
+scale = Vector2(0.42, 0.42)
+script = ExtResource("6_o8vap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CubeArea"]
+scale = Vector2(0.6, 0.62)
+shape = SubResource("RectangleShape2D_ectiw")
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="CubeArea/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-328.09, -304.839)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(1000, 0)
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="CubeArea/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(341.91, 293.548)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(-1000, 0)
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="CubeArea/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(335.243, -306.452)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="CubeArea/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-331.424, 293.548)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(0, -980)
+scale_amount_min = 0.0
+
+[node name="30bb02b9-2220-469f-8200-ec6ef5b9e642" type="Sprite2D" parent="CubeArea/CollisionShape2D"]
+position = Vector2(1.90967, -19.3552)
+scale = Vector2(0.91821, 0.872163)
+texture = ExtResource("6_otpaf")
+
+[node name="CubeArea2" type="Area2D" parent="."]
+position = Vector2(-100, 3000)
+scale = Vector2(0.42, 0.42)
+script = ExtResource("6_o8vap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CubeArea2"]
+scale = Vector2(0.6, 0.62)
+shape = SubResource("RectangleShape2D_ectiw")
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="CubeArea2/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-328.09, -304.839)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(1000, 0)
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="CubeArea2/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(341.91, 293.548)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(-1000, 0)
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="CubeArea2/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(335.243, -306.452)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="CubeArea2/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-331.424, 293.548)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(0, -980)
+scale_amount_min = 0.0
+
+[node name="30bb02b9-2220-469f-8200-ec6ef5b9e642" type="Sprite2D" parent="CubeArea2/CollisionShape2D"]
+position = Vector2(1.90967, -19.3552)
+scale = Vector2(0.91821, 0.872163)
+texture = ExtResource("6_otpaf")
+
+[node name="CubeArea3" type="Area2D" parent="."]
+position = Vector2(800, 3000)
+scale = Vector2(0.42, 0.42)
+script = ExtResource("6_o8vap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CubeArea3"]
+scale = Vector2(0.6, 0.62)
+shape = SubResource("RectangleShape2D_ectiw")
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="CubeArea3/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-328.09, -304.839)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(1000, 0)
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="CubeArea3/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(341.91, 293.548)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(-1000, 0)
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="CubeArea3/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(335.243, -306.452)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="CubeArea3/CollisionShape2D"]
+modulate = Color(0, 0.776471, 0.141176, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-331.424, 293.548)
+scale = Vector2(1.66667, 1.6129)
+amount = 50
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 48.83
+gravity = Vector2(0, -980)
+scale_amount_min = 0.0
+
+[node name="30bb02b9-2220-469f-8200-ec6ef5b9e642" type="Sprite2D" parent="CubeArea3/CollisionShape2D"]
+position = Vector2(1.90967, -19.3552)
+scale = Vector2(0.91821, 0.872163)
+texture = ExtResource("6_otpaf")
+
+[node name="HexArea" type="Area2D" parent="."]
+position = Vector2(-400, 3000)
+scale = Vector2(0.27, 0.262)
+script = ExtResource("8_5g3d8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HexArea"]
+z_index = 1
+shape = SubResource("CircleShape2D_onqpx")
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="HexArea/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(371.345, -174.242)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="HexArea/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(8.4917, -394.83)
+rotation = -1.06034
+scale = Vector2(1.02337, 0.977505)
+skew = 0.026474
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="HexArea/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-347.515, -197.183)
+rotation = -2.08126
+scale = Vector2(1.02337, 0.977505)
+skew = -0.0264744
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="HexArea/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(333.689, 194.581)
+rotation = 1.06034
+scale = Vector2(1.02337, 0.977505)
+skew = -0.0264742
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="HexArea/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(5.06836, 402.817)
+rotation = 2.08126
+scale = Vector2(1.02337, 0.977505)
+skew = 0.0264744
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="HexArea/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-356.072, 169.876)
+rotation = -3.14159
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="3e70c004-ffaf-4307-8a39-db14ace1f639" type="Sprite2D" parent="HexArea/CollisionShape2D"]
+position = Vector2(-1.77832, -3.0658)
+texture = ExtResource("8_muc85")
+
+[node name="HexArea2" type="Area2D" parent="."]
+position = Vector2(200, 3000)
+scale = Vector2(0.27, 0.262)
+script = ExtResource("8_5g3d8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HexArea2"]
+z_index = 1
+shape = SubResource("CircleShape2D_onqpx")
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="HexArea2/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(371.345, -174.242)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="HexArea2/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(8.4917, -394.83)
+rotation = -1.06034
+scale = Vector2(1.02337, 0.977505)
+skew = 0.026474
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="HexArea2/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-347.515, -197.183)
+rotation = -2.08126
+scale = Vector2(1.02337, 0.977505)
+skew = -0.0264744
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="HexArea2/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(333.689, 194.581)
+rotation = 1.06034
+scale = Vector2(1.02337, 0.977505)
+skew = -0.0264742
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="HexArea2/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(5.06836, 402.817)
+rotation = 2.08126
+scale = Vector2(1.02337, 0.977505)
+skew = 0.0264744
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="HexArea2/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-356.072, 169.876)
+rotation = -3.14159
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="3e70c004-ffaf-4307-8a39-db14ace1f639" type="Sprite2D" parent="HexArea2/CollisionShape2D"]
+position = Vector2(-1.77832, -3.0658)
+texture = ExtResource("8_muc85")
+
+[node name="HexArea3" type="Area2D" parent="."]
+position = Vector2(1100, 3000)
+scale = Vector2(0.27, 0.262)
+script = ExtResource("8_5g3d8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HexArea3"]
+z_index = 1
+shape = SubResource("CircleShape2D_onqpx")
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="HexArea3/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(371.345, -174.242)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="HexArea3/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(8.4917, -394.83)
+rotation = -1.06034
+scale = Vector2(1.02337, 0.977505)
+skew = 0.026474
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="HexArea3/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-347.515, -197.183)
+rotation = -2.08126
+scale = Vector2(1.02337, 0.977505)
+skew = -0.0264744
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="HexArea3/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(333.689, 194.581)
+rotation = 1.06034
+scale = Vector2(1.02337, 0.977505)
+skew = -0.0264742
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="HexArea3/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(5.06836, 402.817)
+rotation = 2.08126
+scale = Vector2(1.02337, 0.977505)
+skew = 0.0264744
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="HexArea3/CollisionShape2D"]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(-356.072, 169.876)
+rotation = -3.14159
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("4_xafiu")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="3e70c004-ffaf-4307-8a39-db14ace1f639" type="Sprite2D" parent="HexArea3/CollisionShape2D"]
+position = Vector2(-1.77832, -3.0658)
+texture = ExtResource("8_muc85")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(540, -400)
+script = ExtResource("10_3dpsf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hu2ei")
+}
+
+[connection signal="area_entered" from="Area2D2" to="Line2D" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D2" to="Area2D2" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D2" to="Line2D" method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Area2D" to="Line2D" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Line2D" method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Area2D3" to="Line2D" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D3" to="Area2D3" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D3" to="Line2D" method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="CubeArea" to="Line2D" method="_on_cube_area_area_entered"]
+[connection signal="area_entered" from="CubeArea" to="CubeArea" method="_on_area_entered"]
+[connection signal="area_exited" from="CubeArea" to="Line2D" method="_on_cube_area_area_exited"]
+[connection signal="area_entered" from="CubeArea2" to="Line2D" method="_on_cube_area_area_entered"]
+[connection signal="area_entered" from="CubeArea2" to="CubeArea2" method="_on_area_entered"]
+[connection signal="area_exited" from="CubeArea2" to="Line2D" method="_on_cube_area_area_exited"]
+[connection signal="area_entered" from="CubeArea3" to="Line2D" method="_on_cube_area_area_entered"]
+[connection signal="area_entered" from="CubeArea3" to="CubeArea3" method="_on_area_entered"]
+[connection signal="area_exited" from="CubeArea3" to="Line2D" method="_on_cube_area_area_exited"]
+[connection signal="area_entered" from="HexArea" to="Line2D" method="_on_hex_area_area_entered"]
+[connection signal="area_entered" from="HexArea" to="HexArea" method="_on_area_entered"]
+[connection signal="area_exited" from="HexArea" to="Line2D" method="_on_hex_area_area_exited"]
+[connection signal="area_entered" from="HexArea2" to="Line2D" method="_on_hex_area_area_entered"]
+[connection signal="area_entered" from="HexArea2" to="HexArea2" method="_on_area_entered"]
+[connection signal="area_exited" from="HexArea2" to="Line2D" method="_on_hex_area_area_exited"]
+[connection signal="area_entered" from="HexArea3" to="Line2D" method="_on_hex_area_area_entered"]
+[connection signal="area_entered" from="HexArea3" to="HexArea3" method="_on_area_entered"]
+[connection signal="area_exited" from="HexArea3" to="Line2D" method="_on_hex_area_area_exited"]

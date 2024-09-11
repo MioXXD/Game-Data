@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://coguxn5kc8e0r"]
+
+[ext_resource type="Texture2D" uid="uid://pobbqky3nd8y" path="res://fire_particle.png" id="1_k8t76"]
+[ext_resource type="Texture2D" uid="uid://bbv7xyjrnhclx" path="res://7B1B7CAB-B2FC-426B-A155-C0B0A1C22195.png" id="1_t3400"]
+
+[sub_resource type="Environment" id="Environment_libif"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 4.77
+glow_strength = 1.53
+glow_blend_mode = 1
+glow_hdr_threshold = 2.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5jovk"]
+radius = 269.791
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-1, 2)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_libif")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.523611, 0.544444)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.90977, 2.00272e-05)
+shape = SubResource("CircleShape2D_5jovk")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Area2D/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(-425.889, 231.429)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("1_k8t76")
+emission_shape = 1
+emission_sphere_radius = 91.45
+direction = Vector2(1.385, 0)
+spread = 55.91
+gravity = Vector2(600, -971)
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="Area2D/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(414.43, 231.429)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("1_k8t76")
+emission_shape = 1
+emission_sphere_radius = 94.3
+direction = Vector2(1.385, 0)
+spread = 55.91
+gravity = Vector2(-1000, 0)
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Area2D/CollisionShape2D"]
+self_modulate = Color(2, 2, 2, 1)
+position = Vector2(-1.90991, -426.123)
+amount = 100
+lifetime = 1.2
+local_coords = true
+texture = ExtResource("1_k8t76")
+emission_shape = 1
+emission_sphere_radius = 90.75
+direction = Vector2(1.385, 0)
+spread = 80.0
+gravity = Vector2(600, 971)
+linear_accel_min = 3.03
+linear_accel_max = 7.07
+scale_amount_min = 0.0
+color = Color(0.330246, 0, 0.0544331, 1)
+
+[node name="7b1b7cab-b2fc-426b-a155-c0b0a1c22195" type="Sprite2D" parent="Area2D/CollisionShape2D"]
+self_modulate = Color(0.643137, 0.239216, 0.588235, 1)
+z_index = 1
+position = Vector2(0, -80.8164)
+texture = ExtResource("1_t3400")

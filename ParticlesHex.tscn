@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8e747mc6vtcm"]
+
+[ext_resource type="Texture2D" uid="uid://pobbqky3nd8y" path="res://fire_particle.png" id="1_8en3q"]
+[ext_resource type="Texture2D" uid="uid://b6qx3kcxralgh" path="res://3E70C004-FFAF-4307-8A39-DB14ACE1F639.png" id="2_rrfaf"]
+
+[sub_resource type="Environment" id="Environment_1xw70"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 1.36
+glow_strength = 2.0
+glow_blend_mode = 1
+glow_hdr_threshold = 3.23
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="."]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(834, 239)
+scale = Vector2(0.584259, 0.566667)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("1_8en3q")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(622, 114)
+rotation = -1.0472
+scale = Vector2(0.584259, 0.566667)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("1_8en3q")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(414, 226)
+rotation = -2.0944
+scale = Vector2(0.584259, 0.566667)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("1_8en3q")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(812, 448)
+rotation = 1.0472
+scale = Vector2(0.584259, 0.566667)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("1_8en3q")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="."]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(620, 566)
+rotation = -4.18879
+scale = Vector2(0.584259, 0.566667)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("1_8en3q")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="."]
+modulate = Color(0.121569, 0.188235, 1, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+position = Vector2(409, 434)
+rotation = -3.14159
+scale = Vector2(0.584259, 0.566667)
+amount = 100
+lifetime = 0.9
+local_coords = true
+texture = ExtResource("1_8en3q")
+emission_shape = 1
+emission_sphere_radius = 67.23
+scale_amount_min = 0.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1xw70")
+
+[node name="3e70c004-ffaf-4307-8a39-db14ace1f639" type="Sprite2D" parent="."]
+position = Vector2(616, 336)
+scale = Vector2(0.584259, 0.566667)
+texture = ExtResource("2_rrfaf")
